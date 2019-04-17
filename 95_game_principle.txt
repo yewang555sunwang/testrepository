@@ -1,0 +1,41 @@
+95拳皇游戏原理：
+工具变量：hdc,mdc800，500,bdc7200，500,bmp,backbmp
+staybmp站立图像
+hdc描述窗口内图像
+mdc 辅助的
+bdc 辅助的
+素材：空照片()有大小没内容，游戏照片
+步骤：1. 2. 3. 4.
+selectobject素材到设备
+bitblt 设备1到设备2
+1、bmp 放在mdc 2、 backbmp放在bdc3、bdc放到mdc  4、mdc放到hdc
+HDC  hdc,mdc,bdc;
+HBITMAP bmp,backbmp;
+bitblt(mdc,0,0,window_width,window_height,bdc,backnum*800,0,srccopy);
+++backnum;
+if(++backnum>=9)
+backnum=0;
+wparam 按键检测 各个功能(跑动图)
+去背景：遮罩法，白底黑图，
+色彩法#pragma comment(lib,"winmm.lib")
+transparentblt 设置透明背景
+DWORD t1,t2;定时器gettickcount
+gamepaint函数
+游戏美工，3d绘图，技能图
+枚举技能，虚拟键值表 gif下载转换为序列帧  理解GDI绘图
+
+
+//以下为扩展学习：
+100个hero
+抽象对象，网络编程变成局域网对战
+客户端工作
+win32 。mfc,qt,opencv,dll,lib,mysql ,com，p2p，HTTP
+多线程进程
+线程池，线程栈
+
+Linux 服务器  天猫
+网络安全
+
+http,tcp,ip,udp
+服务器
+
